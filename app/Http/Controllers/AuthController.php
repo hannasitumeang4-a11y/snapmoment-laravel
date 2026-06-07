@@ -133,17 +133,10 @@ class AuthController extends Controller {
         }
 
         DB::table('testimonial')->insert([
-
-            'id' => DB::raw('testimonial_seq.NEXTVAL'),
-
             'customer_id' => session('user_id'),
-
             'rating' => $request->rating,
-
             'pesan' => $request->komentar,
-
             'created_at' => now()
-
         ]);
 
         return back()->with(

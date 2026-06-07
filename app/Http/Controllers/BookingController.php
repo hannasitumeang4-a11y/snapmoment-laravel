@@ -59,7 +59,7 @@ class BookingController extends Controller
             $newBookingId = DB::table('pemesanan')->insertGetId([
                 'customer_id' => (int)$customerId,
                 'paket_id'    => (int)$request->paket_id,
-                'tanggal'     => DB::raw("TO_DATE('$tgl', 'YYYY-MM-DD')"),
+                'tanggal'     => $tgl,
                 'lokasi'      => $request->lokasi,
                 'status'      => 'PENDING',
                 'pembayaran'  => $request->pembayaran,
