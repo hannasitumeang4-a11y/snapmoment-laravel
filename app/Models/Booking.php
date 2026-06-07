@@ -9,7 +9,7 @@ class Booking extends Model
 {
     use HasFactory;
 
-    // Nama tabel di database Oracle
+    // Nama tabel di database
     protected $table = 'bookings';
 
     // Kolom yang boleh diisi (mass assignable)
